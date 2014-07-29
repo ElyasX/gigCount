@@ -51,30 +51,16 @@
         $("#gig").css({backgroundColor: "#C73829", color: "#fff"})
         $("#btn").css({backgroundColor: "#C73829", color: "#fff"})
     };
+    
+    // Beep
+    function playBeep() {
+        navigator.notification.beep(1);
+    }
 
-    function changeColor3() {
-        $("#back").css({backgroundColor: "#e74c3c"})
-        $("#content").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829" })
-        $("#big").css({color: "#8A2626"})
-        $("#title").css({color: "#8A2626"})
-        $("#result").css({color: "#8A2626", })
-        $("#infos").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
-        $("#designed").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
-        $("#gig").css({backgroundColor: "#C73829", color: "#8A2626"})
-        $("#btn").css({backgroundColor: "#C73829", color: "#8A2626"})
-    };
-
-    function changeColor4() {
-        $("#back").css({backgroundColor: "#e74c3c"})
-        $("#content").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829" })
-        $("#big").css({color: "#8A2626"})
-        $("#title").css({color: "#8A2626"})
-        $("#result").css({color: "#8A2626", })
-        $("#infos").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
-        $("#designed").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
-        $("#gig").css({backgroundColor: "#C73829", color: "#8A2626"})
-        $("#btn").css({backgroundColor: "#C73829", color: "#8A2626"})
-    };
+    // Vibrate
+    function vibrate() {
+        navigator.notification.vibrate(500);
+    }
 
     function display() { 
         intro.style.display = "none";
@@ -93,8 +79,8 @@
                     <div id="title"><span id="big">[ محاسبه تعرفه هر گیگ ] <br/> [ طبق مصوبه سازمان تنظیم مقررات ]<br/></span><span> تعداد گیگ مورد نظر خود را وارد کنید :</span></div>
                     <div id="count">
                         <div class="wrapper">
-                          <input type="number" id="gig" onkeypress="searchKeyPress(event);">
-                          <input type="button" id="btn" value ="محاسبه" onclick="doClick();transition();"/>
+                          <input type="number" id="gig" onkeypress="searchKeyPress(event);playBeep();return false;">
+                          <input type="button" id="btn" value ="محاسبه" onclick="doClick();transition();vibrate();return false;"/>
                         </div>
                     </div>
                     <div id="result">
