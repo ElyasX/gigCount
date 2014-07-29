@@ -49,8 +49,6 @@ if(testGig == "Not Allowed !") {
 	document.getElementById('result').innerHTML = "قیمت خالص گیگ (ها) : " + gigPure + "<br/>" + " [ 8 درصد مالیات : " + tax + " ] <br/>" + "قیمت : " + testGig + " تومان";
 }
 
-navigator.notification.beep(1);
-
 } // end doClick()
 
 window.alert = function(title, message){
