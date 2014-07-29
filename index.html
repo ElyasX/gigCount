@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Gig Count</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="http://www.FontFarsi.ir/fontfarsi/css/Far_TwoLight.css" rel="stylesheet" type="text/css">
+        <link href="http://www.FontFarsi.ir/fontfarsi/css/Far_TextBold.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.transit.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=o">
+
+        <script>
+    function searchKeyPress(e)
+    {
+        // look for window.event in case event isn't passed in
+        if (typeof e == 'undefined' && window.event) { e = window.event; }
+        if (e.keyCode == 13)
+        {
+            document.getElementById('btn').click();
+        }
+    }
+
+    $(function() {  
+        $("#btn").click(function() {  
+            $("#getResult").toggleClass("box-change");  
+        });  
+    }); 
+
+    function changeColor1() {
+        $("#back").css({backgroundColor: "#3498db"  })
+        $("#content").css({backgroundColor: "#338BC5", color: "#ecf0f1", boxShadow : "6px 6px 2px 2px rgb(49, 124, 173)" })
+        $("#big").css({color: "#ecf0f1"})
+        $("#title").css({color: "#ecf0f1"})
+        $("#result").css({color: "#ecf0f1", })
+        $("#infos").css({backgroundColor: "#338BC5", color: "#ecf0f1", boxShadow : "6px 6px 2px 2px rgb(49, 124, 173)"})
+        $("#designed").css({backgroundColor: "#338BC5", color: "#ecf0f1", boxShadow : "6px 6px 2px 2px rgb(49, 124, 173)"})
+        $("#gig").css({backgroundColor: "rgb(36, 117, 171)", color: "#ecf0f1"})
+        $("#btn").css({backgroundColor: "rgb(36, 117, 171)", color: "#ecf0f1"})
+    };
+
+    function changeColor2() {
+        $("#back").css({backgroundColor: "#e74c3c"})
+        $("#content").css({backgroundColor: "#DA4434", color: "#fff", boxShadow : "6px 6px 2px 2px #C73829" })
+        $("#big").css({color: "#fff"})
+        $("#title").css({color: "#fff"})
+        $("#result").css({color: "#fff", })
+        $("#infos").css({backgroundColor: "#DA4434", color: "#fff", boxShadow : "6px 6px 2px 2px #C73829"})
+        $("#designed").css({backgroundColor: "#DA4434", color: "#fff", boxShadow : "6px 6px 2px 2px #C73829"})
+        $("#gig").css({backgroundColor: "#C73829", color: "#fff"})
+        $("#btn").css({backgroundColor: "#C73829", color: "#fff"})
+    };
+
+    function changeColor3() {
+        $("#back").css({backgroundColor: "#e74c3c"})
+        $("#content").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829" })
+        $("#big").css({color: "#8A2626"})
+        $("#title").css({color: "#8A2626"})
+        $("#result").css({color: "#8A2626", })
+        $("#infos").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
+        $("#designed").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
+        $("#gig").css({backgroundColor: "#C73829", color: "#8A2626"})
+        $("#btn").css({backgroundColor: "#C73829", color: "#8A2626"})
+    };
+
+    function changeColor4() {
+        $("#back").css({backgroundColor: "#e74c3c"})
+        $("#content").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829" })
+        $("#big").css({color: "#8A2626"})
+        $("#title").css({color: "#8A2626"})
+        $("#result").css({color: "#8A2626", })
+        $("#infos").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
+        $("#designed").css({backgroundColor: "#DA4434", color: "#8A2626", boxShadow : "6px 6px 2px 2px #C73829"})
+        $("#gig").css({backgroundColor: "#C73829", color: "#8A2626"})
+        $("#btn").css({backgroundColor: "#C73829", color: "#8A2626"})
+    };
+
+    function display() { 
+        intro.style.display = "none";
+    }
+    
+    </script>
+    </head>
+    <body>
+        <div id="intro" onclick="display();">
+            <div id="logo"></div>
+        </div>
+        <div id="back">
+            <div id="wrapp">
+                <!--<div id="logo"></div>!-->
+                <div id="content">
+                    <div id="title"><span id="big">[ محاسبه تعرفه هر گیگ ] <br/> [ طبق مصوبه سازمان تنظیم مقررات ]<br/></span><span> تعداد گیگ مورد نظر خود را وارد کنید :</span></div>
+                    <div id="count">
+                        <div class="wrapper">
+                          <input type="number" id="gig" onkeypress="searchKeyPress(event);">
+                          <input type="button" id="btn" value ="محاسبه" onclick="doClick();transition();"/>
+                        </div>
+                    </div>
+                    <div id="result">
+                        <script src="GigCount.js"></script> 
+                    </div>
+                </div>
+                <div id="infos">
+                    <div class="wrapper1">
+                        <span>[ بین 1 الی 5 گیگ = هر گیگ 3600 تومان ] <br/>[ بین 6 الی 10 گیگ = هر گیگ 2600 تومان ] <br/>[ بیش از 10 گیگ = 2600 تومان ] </span>
+                    </div>
+                </div>
+                <div id="designed" onclick="designer();">
+                    <span>توسط : ElyasX</span>
+                </div>
+                <div id="colors">
+                    <a class="blue" href="#"  onclick="changeColor1();"></a>
+                    <a class="orange" href="#"  onclick="changeColor2();"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
