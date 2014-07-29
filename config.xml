@@ -19,11 +19,11 @@
 -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "io.gigCount.gigCostCount"
-        version   = "2.0.0">
+        version   = "1.0.0">
     <name>هر گیگ چند؟</name>
 
     <description>
-        A Simple Way to Calculate your Buying Gigabytes Price From Internet Provider.
+        A Simple Way to Calculate your Buying Gigabytes Price From Internet Provider. [Work.ElyasX@gmail.com]
     </description>
 
     <author href="http://lyas.ir" email="work.elyasx@gmail.com">
