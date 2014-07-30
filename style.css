@@ -7,6 +7,16 @@ html, body {
     transition: all 0.7s;
 }
 
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 *:focus {
 	outline: none;
 	box-shadow: 0px 0px 8px #F2786C;
@@ -65,10 +75,9 @@ html, body {
 }
 
 #logo { 
-	width: 100%;
 	background: url(logo.png) center no-repeat;
-	width: 100%; height: 128px;
-	background-position: 230px;
+	width: 100%; height: 500px;
+	background-position: 540px 300px;
 	margin: 100px 0 0 0;
 	opacity: 0.5;
 }
@@ -149,7 +158,7 @@ html, body {
 	width: 100%;
 	float: left;
 	font-family:'BYekan','Far.TwoLight','Far.TextBold',Tahoma, Sans-Serif;
-	font-size: 26px;
+	font-size: 20px;
 	text-align: center;
 	margin-top: 0;
 	color: #ddd;
@@ -211,19 +220,19 @@ html, body {
 #back { z-index: -1;}
 
 
-@media handheld, only screen and (max-width: 980px) {
-	#wrapp { width: 980px; }
-	#content { width: 950px; margin: 8px 0 0 10px; }
+@media handheld, only screen and (min-width: 801px) and (max-width: 980px) {
+	#wrapp { width: 800px; }
+	#content { width: 780px; margin: 8px 0 0 10px; }
 	#title { font-size: 20px; }
 	#big { font-size: 23px;}
 	#count { margin: 20px 0 10px 0; }
-	.wrapper { margin: 0 375px; }
+	.wrapper { margin: 0 300px; }
 	#gig { width: 125px;}
 	#result { font-size: 20px; margin-top: 10px;}
-	#infos { width: 790px; margin: 12px 0 0 90px; font-size: 20px;}
-	#designed { margin: 12px 385px;}
-	#colors { margin: 5px 0 0 445px; position:static; }
-	#logo { height: 470px; background-position: 422px 347px;}
+	#infos { width: 620px; margin: 12px 0 0 90px; font-size: 20px;}
+	#designed { margin: 12px 300px;}
+	#colors { margin: 5px 0 0 360px; position:static; }
+	#logo { height: 470px; background-position: 360px 347px;}
 }
 
 @media handheld, only screen and (max-width: 800px) {
